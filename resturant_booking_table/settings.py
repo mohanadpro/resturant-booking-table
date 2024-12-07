@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'table',
-    'meal'
+    'meal',
+    'reservation'
 ]
 
 MIDDLEWARE = [
