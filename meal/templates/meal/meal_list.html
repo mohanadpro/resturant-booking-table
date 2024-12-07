@@ -1,4 +1,8 @@
+
 {% block content %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
@@ -14,7 +18,7 @@
                                 <img class="card-img-top" src=" {{ meal.image.url }}"
                                   alt="{{ meal.name }}">                           
                                 <div class="image-flash">
-                                    <h1>Name: {{ meal.name }}</h1>
+                                    <h3>Name: {{ meal.name }}</h3>
                                 </div>
                             </div>
                                 <p class="card-title">{{ meal.description }}</p>
