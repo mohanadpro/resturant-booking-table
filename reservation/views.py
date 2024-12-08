@@ -1,8 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
-def reservation():
+def reservation(request):
     
     return render(
-        "reservation.html"
+        request,
+        "reservation/reservation.html",
+        {'context':{}}
     )
