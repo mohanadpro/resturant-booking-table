@@ -1,13 +1,11 @@
-{% extends "base.html"%}
 {% load static %}
 {% block content %}
 
 <div class="container-fluid">
     <div class="row">
-
-        <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                <h1>Hello world</h1>
                 {% for meal in meal_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
@@ -42,7 +40,6 @@
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
             {% endif %}
-
         </ul>
     </nav>
     {% endif %}
