@@ -6,7 +6,7 @@ from django.forms import DateInput, TimeInput
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservation
-        fields = ('date','time','table','customer')
+        fields = ('date','time','table')
         widgets ={
         'date': DateInput(attrs={
             'class': "form-control",

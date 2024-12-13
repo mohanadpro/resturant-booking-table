@@ -37,13 +37,16 @@ footer{
 }
 
 @media screen and (min-width:968px){
+    .card-body{
+        font-size: 8px;
+    }
     .card-img-top {
         width: 100%;
-        height: 15vw;
+        height: 7vw;
         object-fit: cover;
     }
     .card-title{
-        height: 15vw;
+        font-size: 8px;
         overflow-x: auto;
     }    
     #number_of_geusts_section{

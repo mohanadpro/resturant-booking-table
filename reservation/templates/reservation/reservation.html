@@ -6,7 +6,48 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div id="calendar">
+            <div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- <h2 class="d-flex justify-content-center text-danger my-4"><i>Menu</i></h2> -->
+                        <div class="row">
+                            {% for meal in meal_list %}
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="image-container">
+                                            <img class="card-img-top" src=" {{ meal.image.url }}"
+                                              alt="{{ meal.name }}">                           
+                                            <div class="image-flash mt-2">
+                                                <h5>{{ meal.name }}</h5>
+                                            </div>
+                                        </div>
+                                            <p class="card-title mt-2">{{ meal.description }}</p>
+                                        <hr/>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if forloop.counter|divisibleby:4 %}
+                        </div>
+                        <div class="row">
+                            {% endif %}
+                            {% endfor %}
+            
+                        </div>
+                    </div>
+                </div>
+                {% if is_paginated %}
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page.previous_page_number}}" class="page-link">PREVIOUS &raquo;   </a></li>
+                        {% endif %}
+                        {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
             </div>
 
         </div>
@@ -34,56 +75,20 @@
                 </div>
             </div>
             </section> -->
+            {% if user.is_authenticated %}
             <div class="mt-4 d-flex">
                 <input type="submit" value="Reserve" class="btn btn-success" style="width: 27%;">
             </div>
+            {% else %}
+            <div class="mt-3">
+                <h5 class="text-danger">Plase log in to make reservation </h5>
+            </div>
+            {% endif %}
           </form>
 
         </div>
     </div>
-    <div class="mt-3">
-        <div class="row">
-            <div class="col-12 mt-3">
-                <h2 class="d-flex justify-content-center text-danger my-4"><i>Menu</i></h2>
-                <div class="row">
-                    {% for meal in meal_list %}
-                    <div class="col-md-3">
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <div class="image-container">
-                                    <img class="card-img-top" src=" {{ meal.image.url }}"
-                                      alt="{{ meal.name }}">                           
-                                    <div class="image-flash mt-2">
-                                        <h5>{{ meal.name }}</h5>
-                                    </div>
-                                </div>
-                                    <p class="card-title mt-2">{{ meal.description }}</p>
-                                <hr/>
-                            </div>
-                        </div>
-                    </div>
-                    {% if forloop.counter|divisibleby:4 %}
-                </div>
-                <div class="row">
-                    {% endif %}
-                    {% endfor %}
-    
-                </div>
-            </div>
-        </div>
-        {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page.previous_page_number}}" class="page-link">PREVIOUS &raquo;   </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-        {% endif %}
-    </div>
+
 </div>
 
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
