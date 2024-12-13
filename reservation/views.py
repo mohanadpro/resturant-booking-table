@@ -3,11 +3,17 @@ from meal.models import Meal
 from .forms import ReservationForm
 from .models import Reservation
 # Create your views here.
-def reservation(request):
+def reservation_list(request):
     reservations = Reservation.objects.all()
     for reservation in reservations:
         print(reservation.customer, reservation.table)
+    return render(
+        request,
+        'reservation_list.html',
+        {'reservations':reservations}
+    )
 
+def reservation(request):
     meal_list = Meal.objects.all()
     if request.method == "POST":
         reservation_form = ReservationForm(data=request.POST)

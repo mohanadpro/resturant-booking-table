@@ -6,34 +6,29 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div>
                 <div class="row">
-                    <div class="col-12">
-                        <!-- <h2 class="d-flex justify-content-center text-danger my-4"><i>Menu</i></h2> -->
-                        <div class="row">
-                            {% for meal in meal_list %}
-                            <div class="col-md-4">
-                                <div class="card mb-3">
-                                    <div class="card-body">
-                                        <div class="image-container">
-                                            <img class="card-img-top" src=" {{ meal.image.url }}"
-                                              alt="{{ meal.name }}">                           
-                                            <div class="image-flash mt-2">
-                                                <h5>{{ meal.name }}</h5>
-                                            </div>
+                    <div class="row">
+                        {% for meal in meal_list %}
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="image-container">
+                                        <img class="card-img-top" src=" {{ meal.image.url }}"
+                                            alt="{{ meal.name }}">                           
+                                        <div class="image-flash mt-2">
+                                            <h5>{{ meal.name }}</h5>
                                         </div>
-                                            <p class="card-title mt-2">{{ meal.description }}</p>
-                                        <hr/>
                                     </div>
+                                        <p class="card-title mt-2">{{ meal.description }}</p>
+                                    <hr/>
                                 </div>
                             </div>
-                            {% if forloop.counter|divisibleby:4 %}
                         </div>
-                        <div class="row">
-                            {% endif %}
-                            {% endfor %}
-            
-                        </div>
+                        {% if forloop.counter|divisibleby:4 %}
+                    </div>
+                    <div class="row">
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
                 {% if is_paginated %}
@@ -48,7 +43,6 @@
                     </ul>
                 </nav>
                 {% endif %}
-            </div>
 
         </div>
         <div class="col-md-6">
