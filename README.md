@@ -116,4 +116,11 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
     6. Optionally select Copy default branch only .
     7. Click Create Fork .
 
-
+## Credits 
+---
+### Media
+* Images : from https://www.google.com
+### Code
+* [W3C](https://validator.w3.org/) to validate written code
+* [Stak over flow](https://stackoverflow.com/) to get information in coding
+* [Am i responsive](https://ui.dev/amiresponsive) to see project in different screens
