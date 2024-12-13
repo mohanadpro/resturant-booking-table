@@ -7,29 +7,25 @@
     <div class="row">
         <div class="col-md-6">
                 <div class="row">
-                    <div class="row">
-                        {% for meal in meal_list %}
-                        <div class="col-md-4">
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="image-container">
-                                        <img class="card-img-top" src=" {{ meal.image.url }}"
-                                            alt="{{ meal.name }}">                           
-                                        <div class="image-flash mt-2">
-                                            <h5>{{ meal.name }}</h5>
+                            {% for meal in meal_list %}
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="image-container">
+                                            <img class="card-img-top" src=" {{ meal.image.url }}"
+                                              alt="{{ meal.name }}">                           
                                         </div>
-                                    </div>
+                                        <div class="mt-2">
+                                            <h6>{{ meal.name }}</h6>
+                                        </div>
                                         <p class="card-title mt-2">{{ meal.description }}</p>
-                                    <hr/>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        {% if forloop.counter|divisibleby:4 %}
-                    </div>
-                    <div class="row">
-                        {% endif %}
-                        {% endfor %}
-                    </div>
+                            {% if forloop.counter|divisibleby:4 %}
+                            {% endif %}
+                            {% endfor %}
+
                 </div>
                 {% if is_paginated %}
                 <nav aria-label="Page navigation">

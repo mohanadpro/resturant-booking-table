@@ -1,7 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div>
-    Hello world
-</div>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Table</th>
+        <th scope="col">Customer</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for reservation in reservations %}
+      <tr>
+        <th scope="row">{{reservation.date}}</th>
+        <td>{{reservation.time}}</td>
+        <td>{{reservation.table.table_number}}</td>
+        <td>{{reservation.customer}}</td>
+        <td>
+            <button >delete</button>
+        </td>
+      </tr>
+        {% endfor%}
+    </tbody>
+  </table>
+
 {% endblock %}

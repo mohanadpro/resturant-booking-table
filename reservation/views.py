@@ -4,12 +4,12 @@ from .forms import ReservationForm
 from .models import Reservation
 # Create your views here.
 def reservation_list(request):
-    reservations = Reservation.objects.all()
+    reservations = Reservation.objects.filter(customer=request.user)
     for reservation in reservations:
         print(reservation.customer, reservation.table)
     return render(
         request,
-        'reservation_list.html',
+        'reservation/reservation_list.html',
         {'reservations':reservations}
     )
 
