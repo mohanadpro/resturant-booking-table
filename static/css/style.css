@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 footer{
     background-color: red;
 }
@@ -8,5 +12,41 @@ footer{
 
 .fc-daygrid-day-top a{
     list-style-type: none;
+}
+.red-bg-nav{
+    background-color: red;
+    color: white;
+}
+#number_of_geusts{
+    width: 100px;
+    text-align: center;
+}
+#number_of_geusts_section{
+    margin-top: 50px;
+}
+.time-area{
+    margin-top: 25px;
+}
 
+.time{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    /* margin-left: 15px; */
+
+}
+
+@media screen and (min-width:968px){
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+    .card-title{
+        height: 15vw;
+        overflow-x: auto;
+    }    
+    #number_of_geusts_section{
+        margin-top: 0;
+    }
 }

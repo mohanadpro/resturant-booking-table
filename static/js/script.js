@@ -12,3 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         output = selectElement.value;
         console.log(output)
     })
+
+    $(function () {
+        $('.datetime-input').datetimepicker({
+            format:'YYYY-MM-DD HH:mm:ss'
+        });
+    });
