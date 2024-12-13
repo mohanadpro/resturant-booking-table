@@ -65,3 +65,9 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 <br/>
 * If customer pressed of his username customer can see his/her reservations and they can cancel a reservation here
 
+<br/>
+
+![](static/images/reservations.png)
+
+<br/>
+
