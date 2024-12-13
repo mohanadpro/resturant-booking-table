@@ -11,8 +11,8 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 * Navbar
 * In the navbar you user have three options 
     1. Home to move to home page where the reservation is found
-    2. Resgiter to create an account
-    3. Login to sign in
+    2. Resgiter to move to create an account
+    3. Login to move to sign in
 <br/>
 
 ![](static/images/navbar.png)
