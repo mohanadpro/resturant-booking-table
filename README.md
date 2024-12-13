@@ -71,3 +71,57 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 
 <br/>
 
+## Used languages :
+---
+* PYTHON 
+* HTML 
+* CSS 
+* BOOTSTRAP
+
+
+## Deployment
+---
+
+### To deploy the project to Heroku so it can be run as a remote web application
+    1. Create a Heroku account if you don't already have one here [Heroku](https://dashboard.heroku.com/).
+    2. Create a new Heroku application on the following page here New [Heroku App](https://dashboard.heroku.com/apps)
+    3. Go to the Deploy tab
+    4. Link your GitHub account and connect the application to the repository you created.
+    5. Go to the Settings tab
+    6. Click "Add buildpack"
+    7. Add the Python and Node.js buildpacks in the following order
+    8. Click Reveal Config Vars
+    9. Add 1 new Config Vars
+    10. Key: PORT    Value: 8000
+        * This Config was provided by [CODE INSTITUTE](https://codeinstitute.net/de/).
+    11. Click Deploy Branch
+    12. Click View to launch the application inside a web page.
+* To clone the project
+    1. On GitHub, navigate to the main page of the repository.
+    2. Above the list of files, click <> Code.
+    3. Copy the URL for the repository.
+        * To clone the repository using HTTPS, under "HTTPS", click .
+        * To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click .
+        * To clone a repository using GitHub CLI, click GitHub CLI, then click
+    4. Open Git Bash
+    5. Change the current working directory to the location where you want the cloned directory.
+    6. Type git clone, and then paste the URL you copied earlier.
+        git clone https://github.com/mohanadpro/games.git
+    7. Press enter
+* To fork project
+    1. On GitHub, navigate to the octocat/Spoon-Knife repository.
+    2. Click Fork in the top right corner of the page .
+    3. Under Owner, select the dropdown menu and then select an owner for the forked repository.
+    4. By default, forks are given the same name as their upstream repositories. To further distinguish your fork, you can optionally enter a name in the "Repository name" field.
+    5. Optionally, enter a description for your fork in the “Description” field.
+    6. Optionally select Copy default branch only .
+    7. Click Create Fork .
+
+## Credits 
+---
+### Media
+* Images : from https://www.google.com
+### Code
+* [W3C](https://validator.w3.org/) to validate written code
+* [Stak over flow](https://stackoverflow.com/) to get information in coding
+* [Am i responsive](https://ui.dev/amiresponsive) to see project in different screens
