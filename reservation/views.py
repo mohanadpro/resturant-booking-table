@@ -5,8 +5,6 @@ from .models import Reservation
 # Create your views here.
 def reservation_list(request):
     reservations = Reservation.objects.filter(customer=request.user)
-    for reservation in reservations:
-        print(reservation.customer, reservation.table)
     return render(
         request,
         'reservation/reservation_list.html',
