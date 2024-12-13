@@ -31,5 +31,23 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 <br/>
 
 * Follow us: hier can the customer follow us on social media Youtube - Instagram - Facebook - Twitter
+<br/>
 
 ![](static/images/social-links.png)
+
+<br/>
+
+* Register Page: here can customer create a new account 
+
+<br/>
+
+![](static/images/sign-up.png)
+
+<br/>
+
+* Login: here can customer login to create reservations or cancel ones
+<br/>
+
+![](static/images/login.png)
+
+<br/>
