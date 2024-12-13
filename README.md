@@ -30,6 +30,10 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 
 <br/>
 
+![](static/images/reservation.png)
+
+<br/>
+
 * Follow us: hier can the customer follow us on social media Youtube - Instagram - Facebook - Twitter
 <br/>
 
@@ -51,3 +55,13 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 ![](static/images/login.png)
 
 <br/>
+
+* After login : when customer loged in his username wiil be shown instead of Register
+
+<br/>
+
+![](static/images/after-login.user.png)
+
+<br/>
+* If customer pressed of his username customer can see his/her reservations and they can cancel a reservation here
+
