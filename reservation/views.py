@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 def reservation_list(request):
-    reservations = Reservation.objects.filter(customer=request.user)
+    reservations = Reservation.objects.filter(customer=request.user).order_by("-created_on")
     return render(
         request,
         'reservation/reservation_list.html',
