@@ -42,13 +42,13 @@ footer{
     }
     .card-img-top {
         width: 100%;
-        height: 7vw;
+        height: 12vw;
         object-fit: cover;
     }
     .card-title{
-        font-size: 8px; 
+        font-size: 13px; 
         overflow-x: auto;
-        height: 6vw;
+        height: 7vw;
     }    
     #number_of_geusts_section{
         margin-top: 0;
