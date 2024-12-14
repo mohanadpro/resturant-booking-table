@@ -1,12 +1,12 @@
 from .models import Reservation
 from django import forms
-from django.forms import DateInput, TimeInput
+from django.forms import DateInput, TimeInput,Select,Textarea
 
 
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservation
-        fields = ('date','time','table')
+        fields = ('date','time','area','have_kids','note')
         widgets ={
         'date': DateInput(attrs={
             'class': "form-control",
@@ -19,5 +19,17 @@ class ReservationForm(forms.ModelForm):
             'type':'time',
             'style': 'max-width: 300px; margin-bottom:15px',
             'placeholder': 'Email',
-            })            
+            }),
+        'area': Select(attrs={
+        'class': "form-control", 
+        'type':'select',
+        'style': 'max-width: 300px; margin-bottom:15px',
+        'placeholder': 'Email',
+        }),
+        'note': Textarea(attrs={
+        'class': "form-control", 
+        'style': 'max-width: 300px; margin-bottom:15px',
+        'placeholder': 'Please input if you are alergic from anything',
+        }
+        )        
         }

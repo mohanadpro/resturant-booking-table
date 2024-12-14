@@ -11,7 +11,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('table', '0001_initial'),
     ]
 
     operations = [
@@ -22,7 +21,6 @@ class Migration(migrations.Migration):
                 ('date', models.DateField()),
                 ('time', models.TimeField()),
                 ('customer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-                ('table', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='table.table')),
             ],
         ),
     ]
