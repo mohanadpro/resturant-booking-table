@@ -3,6 +3,7 @@ from meal.models import Meal
 from .forms import ReservationForm
 from .models import Reservation
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 
 # Create your views here.
 def reservation_list(request):
@@ -14,13 +15,17 @@ def reservation_list(request):
     )
 
 def reservation(request):
+
     if request.method == "POST":
         reservation_form = ReservationForm(data=request.POST)
         if reservation_form.is_valid():
             reservation = reservation_form.save(commit=False)
             reservation.customer = request.user
             reservation_form.save()
-            print('Reservation is saved successfully')
+            messages.add_message(request, messages.SUCCESS, 'Reservation added')
+            return HttpResponseRedirect(reverse('reservation_list'))
+        else:
+            messages.add_message(request, messages.ERROR, 'Error happened')
     reservation_form = ReservationForm()
     # paginate_by = 6
     return render(
