@@ -20,11 +20,12 @@
 
         <th scope="row">{{reservation.date}}</th>
         <td>{{reservation.time}}</td>
-        <td>{{reservation.area}}</td>
+        <td>{% if reservation.area == 0 %}Near to fireplace{% elif reservation.area == 1%}Terrace{% elif reservation.area == 2 %}Smoker{% elif reservation.area == 3%}Inside{% elif reservation.area == 4%}Second floor{%endif%}</td>
         <td>{% if reservation.have_kids %}Yes {%else%}No {%endif%}</td>
         <td>{{reservation.note}}</td>
         <td>
-            <button class="btn btn-delete" reservation_id="{{reservation.id}}" data-bs-target="#deleteModal" data-bs-toggle="modal"><i class="fa fa-trash ms-3 text-success"></i></button>
+            <button class="btn btn-edit" reservation_id="{{reservation.id}}" ><i class="fa fa-edit ms-3 text-success"></i></button>
+            <button class="btn btn-delete" reservation_id="{{reservation.id}}" data-bs-target="#deleteModal" data-bs-toggle="modal"><i class="fa fa-trash ms-3 text-danger"></i></button>
         </td>
       </tr>
         {% endfor%}

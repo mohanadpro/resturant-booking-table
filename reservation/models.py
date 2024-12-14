@@ -12,4 +12,5 @@ class Reservation(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
     have_kids = models.BooleanField(default=False)
     note = models.TextField(default='')
+    created_on = models.DateTimeField(auto_now_add=True)
     
