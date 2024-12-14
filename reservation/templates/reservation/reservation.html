@@ -40,22 +40,7 @@
                 {% endif %}
 
         </div>
-        <div class="col-md-6">
-            <form method="post">
-            {% csrf_token %}
-            {{reservation_form}}
-            {% if user.is_authenticated %}
-            <div class="mt-4 d-flex">
-                <input type="submit" value="Reserve" class="btn btn-success" style="width: 27%;">
-            </div>
-            {% else %}
-            <div class="mt-3">
-                <h5 class="text-danger">Plase log in to make reservation </h5>
-            </div>
-            {% endif %}
-          </form>
 
-        </div>
     </div>
 
 </div>

@@ -26,8 +26,8 @@ def reservation(request):
     # paginate_by = 6
     return render(
         request,
-        "reservation/reservation.html",
-        {'meal_list':meal_list,'reservation_form':reservation_form}
+        "reservation/reserve.html",
+        {'reservation_form':reservation_form}
     )
 
 def delete_reservation(request, reservation_id):
