@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% load static%}
 <div class="container mt-3">
 <table class="table">
     <thead>
@@ -15,15 +15,46 @@
     <tbody>
         {% for reservation in reservations %}
       <tr>
+
         <th scope="row">{{reservation.date}}</th>
         <td>{{reservation.time}}</td>
         <td>{{reservation.table.table_number}}</td>
         <td>
-            <button class="btn"><i class="fa fa-trash ms-3 text-success"></i></button>
+            <button class="btn btn-delete" reservation_id="{{reservation.id}}" data-bs-target="#deleteModal" data-bs-toggle="modal"><i class="fa fa-trash ms-3 text-success"></i></button>
         </td>
       </tr>
         {% endfor%}
     </tbody>
   </table>
+
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"
+        id="deleteModalLabel">Delete Reservation?</h5>
+      <button type="button" class="btn-close"
+        data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      Are you sure you want to delete your Reservation? <br/>
+      This action cannot be undone.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary"
+        data-bs-dismiss="modal">Close</button>
+      <a id="deleteConfirm" href="#" class="btn
+        btn-danger">Delete</a>
+    </div>
+  </div>
 </div>
+</div>
+</div>
+{% endblock content%}
+
+{% block extras %}
+<script src="{% static 'js/reservation.js' %}"></script>
+
 {% endblock %}
