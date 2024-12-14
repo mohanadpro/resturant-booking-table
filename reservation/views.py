@@ -14,7 +14,6 @@ def reservation_list(request):
     )
 
 def reservation(request):
-    meal_list = Meal.objects.all()
     if request.method == "POST":
         reservation_form = ReservationForm(data=request.POST)
         if reservation_form.is_valid():

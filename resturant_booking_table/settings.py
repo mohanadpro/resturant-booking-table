@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'meal',
     'reservation',
-    
+    'home_page'    
 ]
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
