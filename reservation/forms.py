@@ -29,7 +29,7 @@ class ReservationForm(forms.ModelForm):
         'note': Textarea(attrs={
         'class': "form-control", 
         'style': 'max-width: 300px; margin-bottom:15px',
-        'placeholder': 'Please input if you are alergic from anything',
+        'placeholder': 'Please input if you are allergic to anything',
         }
         )        
         }

@@ -8,7 +8,9 @@
       <tr>
         <th scope="col">Date</th>
         <th scope="col">Time</th>
-        <th scope="col">Table</th>
+        <th scope="col">Area</th>
+        <th scope="col">Have Kids</th>
+        <th scope="col">Notes</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -18,7 +20,9 @@
 
         <th scope="row">{{reservation.date}}</th>
         <td>{{reservation.time}}</td>
-        <td>{{reservation.table.table_number}}</td>
+        <td>{{reservation.area}}</td>
+        <td>{% if reservation.have_kids %}Yes {%else%}No {%endif%}</td>
+        <td>{{reservation.note}}</td>
         <td>
             <button class="btn btn-delete" reservation_id="{{reservation.id}}" data-bs-target="#deleteModal" data-bs-toggle="modal"><i class="fa fa-trash ms-3 text-success"></i></button>
         </td>
