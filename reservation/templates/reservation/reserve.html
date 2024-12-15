@@ -2,12 +2,12 @@
 {% block content%}
 <div class="d-flex justify-content-center">
 <div class="col-md-6">
-    <form method="post">
+    <form method="post" id="reservationForm">
     {% csrf_token %}
     {{reservation_form}}
     {% if user.is_authenticated %}
     <div class="mt-4 d-flex">
-        <input type="submit" value="Reserve" class="btn btn-success" style="width: 27%;">
+        <button type="submit" id="submitButton" class="btn btn-success" style="width: 27%;">Reserve </button>
     </div>
     {% else %}
     <div class="mt-3">

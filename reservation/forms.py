@@ -12,7 +12,8 @@ class ReservationForm(forms.ModelForm):
             'class': "form-control",
             'type':'date',
             'style': 'max-width: 300px;',
-            'placeholder': 'Name'
+            'placeholder': 'Name',
+            'id':'ReservationDate'
             }),
         'time': TimeInput(attrs={
             'class': "form-control", 
