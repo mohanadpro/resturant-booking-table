@@ -5,7 +5,10 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 
 ## Design
 ### Used color
-* red
+* red for background 
+* green for buttons
+* white for text and icons
+* black for text
 
 ## Entity Relation Diagram 
 <br/>
@@ -98,6 +101,16 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 * CSS 
 * BOOTSTRAP
 
+## Framework - Libraries - Tools
+* Django
+* cloudinary to upload images
+* allauth to create user and login
+* bootstrap to style pages
+* gunicorn to host code on heroku
+* VSCode was used as the main tool to write and edit code.
+* Git was used for the version control of the website.
+* GitHub was used to host the code of the website.
+
 ## Deployment
 ---
 
@@ -144,3 +157,4 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 * [W3C](https://validator.w3.org/) to validate written code
 * [Stak over flow](https://stackoverflow.com/) to get information in coding
 * [Am i responsive](https://ui.dev/amiresponsive) to see project in different screens
+* [Diagrams](https://app.diagrams.net/) to create entity relation diagram
