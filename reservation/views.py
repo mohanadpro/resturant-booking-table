@@ -69,9 +69,7 @@ def delete_reservation(request, reservation_id):
     """
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     reservation.delete()
-    print('reservation deleted')
-
-
+    messages.add_message(request, messages.SUCCESS, 'Reservation is deleted successfully...')
     return HttpResponseRedirect(reverse('reservation_list'))
 
 
