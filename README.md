@@ -26,6 +26,19 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 
 <br/>
 
+* A small introduction about the resturant 
+![](static/images/greeting-message.png)
+
+<br/>
+
+* Images to show the guests of the resturant
+
+<br/>
+
+![](static/images/guest.png)
+
+<br/>
+
 * Menu here is the meal that the restaurant serve 
 <br/>
 
@@ -63,7 +76,7 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 
 <br/>
 
-* After login : when customer loged in his username wiil be shown instead of Register
+* After login : when customer loged in his username wiil be shown instead of Register and book a table link to move to reservation page
 
 <br/>
 
