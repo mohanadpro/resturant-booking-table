@@ -138,7 +138,7 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
     4. Open Git Bash
     5. Change the current working directory to the location where you want the cloned directory.
     6. Type git clone, and then paste the URL you copied earlier.
-        git clone https://github.com/mohanadpro/games.git
+        git clone https://github.com/mohanadpro/resturant-booking-table.git
     7. Press enter
 * To fork project
     1. On GitHub, navigate to the octocat/Spoon-Knife repository.
