@@ -6,6 +6,7 @@
 <table class="table">
     <thead>
       <tr>
+        <th scope="col">Number of guests</th>
         <th scope="col">Date</th>
         <th scope="col">Time</th>
         <th scope="col">Area</th>
@@ -17,6 +18,7 @@
     <tbody>
         {% for reservation in reservations %}
       <tr>
+        <th scope="row">{{reservation.how_many_people}}</th>
 
         <th scope="row">{{reservation.date}}</th>
         <td>{{reservation.time}}</td>
