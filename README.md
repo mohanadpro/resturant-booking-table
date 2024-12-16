@@ -7,6 +7,13 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 ### Used color
 * red
 
+## Entity Relation Diagram 
+<br/>
+
+![](static/images/Entity-diagram.png)
+
+<br/>
+
 ## Features
 * Navbar
 * In the navbar you user have three options 
