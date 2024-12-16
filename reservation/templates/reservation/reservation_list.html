@@ -12,6 +12,7 @@
         <th scope="col">Time</th>
         <th scope="col">Area</th>
         <th scope="col">Have Kids</th>
+        <th scope="col">Special Request</th>
         <th scope="col">Notes</th>
         <th scope="col">Action</th>
       </tr>
@@ -27,6 +28,7 @@
         <td>{{reservation.time}}</td>
         <td>{% if reservation.area == 0 %}Near to fireplace{% elif reservation.area == 1%}Terrace{% elif reservation.area == 2 %}Smoker{% elif reservation.area == 3%}Inside{% elif reservation.area == 4%}Second floor{%endif%}</td>
         <td>{% if reservation.have_kids %}Yes {%else%}No {%endif%}</td>
+        <td>{{reservation.special_request}}</td>
         <td>{{reservation.note}}</td>
         <td>
             <button class="btn btn-primary btn-edit" reservation_id="{{reservation.id}}" >

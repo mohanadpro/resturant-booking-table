@@ -1,12 +1,12 @@
 from .models import Reservation
 from django import forms
-from django.forms import DateInput, TimeInput,Select,Textarea,NumberInput
+from django.forms import DateInput, TimeInput,Select,Textarea,NumberInput,CheckboxInput,TextInput
 
 
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Reservation
-        fields = ('how_many_people','date','time','area','have_kids','note')
+        fields = ('how_many_people','date','time','area','have_kids','special_request','note')
         widgets ={
         'how_many_people': NumberInput(attrs={
             'class': "form-control",
@@ -36,10 +36,16 @@ class ReservationForm(forms.ModelForm):
         'style': 'max-width: 300px; margin-bottom:15px',
         'placeholder': 'Email',
         }),
+        'have_kids': CheckboxInput(attrs={
+        # 'style':'width:70%'
+        }),
+        'special_request':TextInput(attrs={
+        'class': "form-control",
+        'style': 'max-width: 300px;',
+        'placeholder': 'Your special request',
+        }),
         'note': Textarea(attrs={
         'class': "form-control", 
-        'style': 'max-width: 300px; margin-bottom:15px',
+        'style': 'max-width: 300px; margin-bottom:15px;',
         'placeholder': 'Please input if you are allergic to anything',
-        }
-        )        
-        }
+        })}

@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
-
+from django.utils.safestring import mark_safe
 # Create your models here.
 
 AREAS = ((0, "Near to fireplace"), (1, "Terrace"), (2, "Smoker"), (3,"Inside"), (4, "Second floor"))
@@ -17,6 +17,7 @@ class Reservation(models.Model):
         ] )
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
     have_kids = models.BooleanField(default=False)
-    note = models.TextField(default='')
+    special_request = models.CharField(max_length=250,null=True)
+    note = models.TextField(null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     
