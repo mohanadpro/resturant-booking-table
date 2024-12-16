@@ -45,6 +45,7 @@ def reservation(request):
     :template:`reservation/reservation_list.html`
     """
     if request.method == "POST":
+        time = str(datetime.now()).split(' ')[1].split('.')[0]
         reservation_form = ReservationForm(data=request.POST)
         if reservation_form.is_valid() == False:
             messages.add_message(request, messages.ERROR, 'Error happened')
