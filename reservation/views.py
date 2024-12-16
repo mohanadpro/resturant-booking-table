@@ -1,19 +1,35 @@
 from django.shortcuts import render,get_object_or_404,reverse
-from meal.models import Meal
 from .forms import ReservationForm
 from .models import Reservation
 from django.http import HttpResponseRedirect
 from django.contrib import messages
-from datetime import date,datetime
-# import 
+from datetime import datetime
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 # Create your views here.
 def reservation_list(request):
-    reservations = Reservation.objects.filter(customer=request.user).order_by("-created_on")
-    return render(
-        request,
-        'reservation/reservation_list.html',
-        {'reservations':reservations}
-    )
+    temp_reservations = Reservation.objects.filter(customer=request.user).order_by("-created_on")
+    p = Paginator(temp_reservations, 6)
+    page_number =1 if request.GET.get('page') == None else request.GET.get('page')
+    # reservations = paginator.page(1)
+    # return render(
+    #     request,
+    #     'reservation/reservation_list.html',
+    #     {'reservations':reservations}
+    # )
+    try:
+        page_obj = p.get_page(page_number)  # returns the desired page object
+    except PageNotAnInteger:
+        # if page_number is not an integer then assign the first page
+        page_obj = p.page(1)
+    except EmptyPage:
+        # if page is empty then return last page
+        page_obj = p.page(p.num_pages)
+    context = {'page_obj': page_obj,'reservations':p.page(page_number)}
+    # sending the page object to index.html
+    return render(request, 'reservation/reservation_list.html', context)
+
+
 
 def reservation(request):
 
