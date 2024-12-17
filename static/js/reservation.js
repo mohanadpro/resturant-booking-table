@@ -1,7 +1,4 @@
-
-
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
-
 const reservationForm = document.getElementById("reservationForm");
 const editButtons = document.getElementsByClassName("btn-edit");
 const submitButton = document.getElementById("submitButton");
