@@ -46,9 +46,9 @@ footer{
         object-fit: cover;
     }
     .card-title{
-        font-size: 13px; 
+        font-size: 1rem; 
         overflow-x: auto;
-        height: 7vw;
+        height: 10vw;
     }    
     #number_of_geusts_section{
         margin-top: 0;
