@@ -31,10 +31,10 @@
         <td>{{reservation.special_request}}</td>
         <td>{{reservation.note}}</td>
         <td>
-            <button class="btn btn-primary btn-edit" reservation_id="{{reservation.id}}" >
+            <button class="btn btn-primary btn-edit" data-reservation_id="{{reservation.id}}" >
                edit
             </button>
-            <button class="btn btn-danger btn-delete" reservation_id="{{reservation.id}}" data-bs-target="#deleteModal" data-bs-toggle="modal">
+            <button class="btn btn-danger btn-delete" data-reservation_id="{{reservation.id}}" data-bs-target="#deleteModal" data-bs-toggle="modal">
                delete
             </button>
         </td>
