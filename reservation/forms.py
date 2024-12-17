@@ -26,17 +26,12 @@ class ReservationForm(forms.ModelForm):
                 'class': "form-control",
                 'min': '1',
                 'max': '25',
-                'type': 'number',
-                'style': 'max-width: 300px;',
-                'placeholder': 'Name',
-                'id': 'ReservationDate'
+                'style': 'max-width: 300px;'
                 }),
             'date': DateInput(attrs={
-                'class': "form-control",
+                'class': "form-control my-2",
                 'type': 'date',
-                'style': 'max-width: 300px;',
-                'placeholder': 'Name',
-                'id': 'ReservationDate'
+                'style': 'max-width: 300px;'
                 }),
             'time': TimeInput(attrs={
                 'class': "form-control",
@@ -44,19 +39,16 @@ class ReservationForm(forms.ModelForm):
                 'style': 'max-width: 300px; margin-bottom:15px',
                 }),
             'area': Select(attrs={
-                'class': "form-control",
-                'style': 'max-width: 300px; margin-bottom:15px',
-            }),
-            'have_kids': CheckboxInput(attrs={
-                # 'style':'width:70%'
+                'class': "form-control my-2",
+                'style': 'max-width: 300px;',
             }),
             'special_request': TextInput(attrs={
-                'class': "form-control",
+                'class': "form-control my-2",
                 'style': 'max-width: 300px;',
                 'placeholder': 'Your special request',
             }),
             'note': Textarea(attrs={
                 'class': "form-control",
-                'style': 'max-width: 300px; margin-bottom:15px;',
+                'style': 'max-width: 300px;;',
                 'placeholder': 'Please input if you are allergic to anything',
             })}
