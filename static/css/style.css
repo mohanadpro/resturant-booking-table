@@ -3,7 +3,7 @@
     margin: 0;
 }
 footer{
-    background-color: red;
+    background-color: #A80516;
 }
 .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
     min-height: 0.5rem;
@@ -14,7 +14,7 @@ footer{
     list-style-type: none;
 }
 .red-bg-nav{
-    background-color: red;
+    background-color: #A80516;
     color: white;
 }
 #number_of_geusts{
