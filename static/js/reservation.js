@@ -1,4 +1,3 @@
-const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const reservationForm = document.getElementById("reservationForm");
 const editButtons = document.getElementsByClassName("btn-edit");
 const submitButton = document.getElementById("submitButton");
@@ -7,7 +6,6 @@ for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
       let reservationId = e.target.getAttribute("data-reservation_id");
       deleteConfirm.href = `delete_reservation/${reservationId}`;
-      deleteModal.show();
     });
   }
 
