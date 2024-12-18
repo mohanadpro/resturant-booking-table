@@ -60,6 +60,33 @@ The project was tested on multiple web browsers to check for compatibility issue
 ## Code Validation
 
 ### HTML Validation
+<details>
+<summary> Home Page
+</summary>
+
+![Home Page](documentation/validation/home_page_html_validation.png)
+</details>
+
+<details>
+<summary> Login
+</summary>
+
+![Login](documentation/validation/login_html_validation.png)
+</details>
+
+<details>
+<summary> Reservation List
+</summary>
+
+![Reservation List](documentation/validation/reservation_list_html_validation.png)
+</details>
+
+<details>
+<summary> Reserve
+</summary>
+
+![Reserve](documentation/validation/reservation_validation_html.png)
+</details>
 
 ### CSS Validation
 
