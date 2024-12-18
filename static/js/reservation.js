@@ -12,9 +12,8 @@ for (let button of deleteButtons) {
   for (let button of editButtons) {
     button.addEventListener("click", (e) => {
       let reservationId = e.target.getAttribute("data-reservation_id");
-      // let reservation = document.getElementById(`reservation${reservationId}`).innerText;
-      // commentText.value = commentContent;
-      submitButton.innerText = "Update";
-      reservationForm.setAttribute("action", `edit_reservation/${reservationId}`);
+      // reservationForm.setAttribute("action", `edit_reservation/${reservationId}`);
+      submitButton.href = `edit_reservation/${reservationId}`;
+      console.log(document.getElementById('my-paragraph'))
     });
   }

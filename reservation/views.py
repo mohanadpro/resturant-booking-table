@@ -47,6 +47,7 @@ def reservation(request):
     **Template:**
     :template:`reservation/reservation_list.html`
     """
+    print(' Save ')
     if request.method == "POST":
         time = str(datetime.now()).split(' ')[1].split('.')[0]
         reservation_form = ReservationForm(data=request.POST)
@@ -104,27 +105,42 @@ def delete_reservation(request, reservation_id):
 
 def edit_reservation(request, reservation_id):
     """
-    view to edit comments
+    view to edit reservation
     """
-    if request.method == "POST":
-        reservation = get_object_or_404(Reservation, pk=reservation_id)
-        reservation_form = ReservationForm(
-            data=request.POST,
-            instance=reservation)
+    print(' update ')
 
+    reservation = get_object_or_404(Reservation,pk=reservation_id)
+    reservation_form = ReservationForm(initial={
+        'how_many_people': reservation.how_many_people,
+        'date': reservation.date,
+        'time': reservation.time,
+        'area': reservation.area,
+        'have_kids': reservation.have_kids,
+        'special_request': reservation.special_request,
+        'note': reservation.note
+    })
+    if request.method == "POST":
+        updated_reservation = get_object_or_404(Reservation,pk=reservation_id)
+        reservation_form = ReservationForm(data=request.POST, instance=reservation)
         if reservation_form.is_valid():
-            reservation = reservation_form.save(commit=False)
-            reservation.date = date
-            reservation.time = time
-            reservation.area = area
-            reservation.have_kids = have_kids
-            reservation.note = note
-            reservation.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            updated_reservation = reservation_form.save(commit=False)
+            updated_reservation.how_many_people = reservation_form['how_many_people'].value()
+            updated_reservation.date = reservation_form['date'].value()
+            updated_reservation.time = reservation_form['time'].value()
+            updated_reservation.area = reservation_form['area'].value()
+            updated_reservation.have_kids = reservation_form['have_kids'].value()
+            updated_reservation.special_request = reservation_form['special_request'].value()
+            updated_reservation.note = reservation_form['note'].value()
+            updated_reservation.save()
+            messages.add_message(request, messages.SUCCESS, 'Reservation Updated!')
+            return HttpResponseRedirect(reverse('reservation_list'))
         else:
             messages.add_message(
                 request,
                 messages.ERROR,
-                'Error updating comment!')
-
-    return HttpResponseRedirect(reverse('reservation_list'))
+                'Error update reservation')
+    return render(
+        request,
+        'reservation/reserve.html',
+        {'reservation_form': reservation_form}
+    )
