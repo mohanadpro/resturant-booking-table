@@ -1,9 +1,13 @@
+:root{
+    --primary-color:#A80516;
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 footer{
-    background-color: #A80516;
+    background-color: var(--primary-color);
 }
 .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
     min-height: 0.5rem;
@@ -14,7 +18,7 @@ footer{
     list-style-type: none;
 }
 .red-bg-nav{
-    background-color: #A80516;
+    background-color: var(--primary-color);
     color: white;
 }
 #number_of_geusts{
@@ -35,7 +39,9 @@ footer{
     /* margin-left: 15px; */
 
 }
-
+.btn-danger{
+    background-color: var(--primary-color);
+}
 @media screen and (min-width:968px){
     .card-body{
         font-size: 8px;
