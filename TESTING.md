@@ -216,3 +216,19 @@ The project was tested on multiple web browsers to check for compatibility issue
 
 
 ## Features Testing
+
+| Page          | User Action   | Expected Result  | Notes            |
+|---------------|---------------|------------------|------------------|
+| Home Page     |               |                  |                  |
+|               | Click on Logo | Redirect to Home Page | PASS        |
+|               | Click on Register button | Redirect to Sign Up page | PASS |
+|               | Click on carousel control | Move left, move right | PASS |
+|               | Click on social links in footer | Open new tab with appropriate link | PASS |
+|               | Click on Login (Navigation bar) | Redirect to Login page | PASS |
+| Home Page (Logged In - User)  |                 |          |  |
+|               | After Login | Register button is now Book a table button | PASS |
+|               | After Login | Login button is Logout button | PASS |
+|               | After Login | User's username is displayed in navigation bar | PASS |
+|               | Click on Book a table | Redirect to reservation page | PASS |
+|               | Click on user's username after login | Redirect to Reservations Overview page | PASS |
+|               | Click on Logout | Redirect to Logout Page | PASS |
