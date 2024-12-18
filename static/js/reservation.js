@@ -9,11 +9,9 @@ for (let button of deleteButtons) {
     });
   }
 
-  for (let button of editButtons) {
-    button.addEventListener("click", (e) => {
-      let reservationId = e.target.getAttribute("data-reservation_id");
-      // reservationForm.setAttribute("action", `edit_reservation/${reservationId}`);
-      submitButton.href = `edit_reservation/${reservationId}`;
-      console.log(document.getElementById('my-paragraph'))
-    });
-  }
+for (let button of editButtons) {
+  button.addEventListener("click", (e) => {
+    let reservationId = e.target.getAttribute("data-reservation_id");
+    submitButton.href = `edit_reservation/${reservationId}`;
+  });
+}
