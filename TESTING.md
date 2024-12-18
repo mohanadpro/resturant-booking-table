@@ -91,7 +91,7 @@ The project was tested on multiple web browsers to check for compatibility issue
 ### CSS Validation
 
 <details>
-<summary> Style
+<summary> Style.css
 </summary>
 
 ![Style](documentation/validation/style_css_validation.png)
@@ -100,7 +100,7 @@ The project was tested on multiple web browsers to check for compatibility issue
 ### JavaScript Validation
 
 <details>
-<summary> Reservation
+<summary> reservation.js
 </summary>
 
 ![Reservation](documentation/validation/reservation_js_validation.png)
