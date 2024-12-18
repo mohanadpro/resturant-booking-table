@@ -1,4 +1,3 @@
-const reservationForm = document.getElementById("reservationForm");
 const editButtons = document.getElementsByClassName("btn-edit");
 const submitButton = document.getElementById("submitButton");
 const deleteButtons = document.getElementsByClassName("btn-delete");
