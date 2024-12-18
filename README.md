@@ -164,3 +164,7 @@ Please see  [TESTING.md](TESTING.md) for all the detailed testing performed.
 * [Stak over flow](https://stackoverflow.com/) to get information in coding
 * [Am i responsive](https://ui.dev/amiresponsive) to see project in different screens
 * [Diagrams](https://app.diagrams.net/) to create entity relation diagram
+
+### Acknowledgments
+
+* I would like to thank my mentor for support and feedback throughout this project, Mitko Bachvarov.
