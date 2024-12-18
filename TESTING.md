@@ -30,22 +30,25 @@ The project was tested on multiple web browsers to check for compatibility issue
 <summary> Chrome
 </summary>
 ![Chrome](documentation/validation/chrom.png)
+</details>
 
 <details>
 <summary> Microsoft Edge
 </summary>
 ![Microsoft Edge](documentation/validation/Microsoft_edge.png)
-
+</details>
 
 <details>
 <summary> Opera
 </summary>
 ![Opera](documentation/validation/opera.png)
+</details>
 
 <details>
 <summary> Mozilla
 </summary>
 ![Mozilla](documentation/validation/Mozilla.png)
+</details>
 
 ## Device Testing
 
