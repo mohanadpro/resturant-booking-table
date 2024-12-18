@@ -220,7 +220,7 @@ The project was tested on multiple web browsers to check for compatibility issue
 | Page          | User Action   | Expected Result  | Notes            |
 |---------------|---------------|------------------|------------------|
 | Home Page     |               |                  |                  |
-|               | Click on Logo | Redirect to Home Page | PASS        |
+|               | Click on Home | Redirect to Home Page | PASS        |
 |               | Click on Register button | Redirect to Sign Up page | PASS |
 |               | Click on carousel control | Move left, move right | PASS |
 |               | Click on social links in footer | Open new tab with appropriate link | PASS |
