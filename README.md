@@ -9,7 +9,7 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 * red #A80516 for background 
 * green #198754 for buttons
 * white #FFFFFF for text and icons
-* black #198754 for text
+* black #212529 for text
 
 ## Entity Relation Diagram 
 <br/>
