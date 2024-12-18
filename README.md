@@ -151,6 +151,10 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
     6. Optionally select Copy default branch only .
     7. Click Create Fork .
 
+
+## Testing
+Please see  [TESTING.md](TESTING.md) for all the detailed testing performed.
+
 ## Credits 
 ---
 ### Media

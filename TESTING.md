@@ -208,7 +208,11 @@ The project was tested on multiple web browsers to check for compatibility issue
 
 * When I have deployed the site to Heroku for the first time, static files were not working, it was due to missing of whitenoise library, so I installed it and then deployed the project again. after that everything worked finally 
 
+* styling reserve form was the the best so the checkbox was beside the note textarea I fixed that by adding the form inside a table tag
+
 ### Unresolved Bug
+
+
 
 
 ## Features Testing
