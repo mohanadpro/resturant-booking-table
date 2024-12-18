@@ -1,6 +1,7 @@
 const editButtons = document.getElementsByClassName("btn-edit");
 const submitButton = document.getElementById("submitButton");
 const deleteButtons = document.getElementsByClassName("btn-delete");
+const deleteConfirm = document.getElementById("deleteConfirm");
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
       let reservationId = e.target.getAttribute("data-reservation_id");
