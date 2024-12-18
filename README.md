@@ -5,10 +5,10 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 
 ## Design
 ### Used color
-* red for background 
-* green for buttons
-* white for text and icons
-* black for text
+* red #A80516 for background 
+* green #198754 for buttons
+* white #FFFFFF for text and icons
+* black #198754 for text
 
 ## Entity Relation Diagram 
 <br/>
