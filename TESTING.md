@@ -90,6 +90,13 @@ The project was tested on multiple web browsers to check for compatibility issue
 
 ### CSS Validation
 
+<details>
+<summary> Style
+</summary>
+
+![Style](documentation/validation/style_css_validation.png)
+</details>
+
 ### JavaScript Validation
 
 ### Python
