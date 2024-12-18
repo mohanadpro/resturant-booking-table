@@ -99,6 +99,13 @@ The project was tested on multiple web browsers to check for compatibility issue
 
 ### JavaScript Validation
 
+<details>
+<summary> Reservation
+</summary>
+
+![Reservation](documentation/validation/reservation_js_validation.png)
+</details>
+
 ### Python
 
 
