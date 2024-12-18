@@ -108,6 +108,7 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 * allauth to create user and login
 * bootstrap to style pages
 * gunicorn to host code on heroku
+* whitenoise to handle static files
 * VSCode was used as the main tool to write and edit code.
 * Git was used for the version control of the website.
 * GitHub was used to host the code of the website.
