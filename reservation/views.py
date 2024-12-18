@@ -36,23 +36,23 @@ def reservation_list(request):
     # sending the page object to index.html
     return render(request, 'reservation/reservation_list.html', context)
 
+
 def check_if_date_and_time_valid(date, selected_time):
     time = str(datetime.now()).split(' ')[1].split('.')[0]
     if (datetime.strptime(
             date,
             '%Y-%m-%d') < datetime.strptime(
                 datetime.utcnow().strftime('%Y-%m-%d'),
-                '%Y-%m-%d')
-                or (
+                '%Y-%m-%d') or (
                     datetime.strptime(
                         date,
                         '%Y-%m-%d') == datetime.strptime(
                             datetime.utcnow().strftime('%Y-%m-%d'),
                             '%Y-%m-%d') and
-                            (datetime.strptime(
-                                selected_time,
-                                '%H:%M') <
-                                datetime.strptime(time, "%H:%M:%S")))):
+                    (datetime.strptime(
+                        selected_time,
+                        '%H:%M') <
+                        datetime.strptime(time, "%H:%M:%S")))):
         return False
     else:
         return True
@@ -77,7 +77,7 @@ def reservation(request):
         elif check_if_date_and_time_valid(
             reservation_form['date'].value(),
             reservation_form['time'].value()
-        ) is False:    
+        ) is False:
             messages.add_message(
                 request,
                 messages.ERROR,
@@ -119,7 +119,7 @@ def edit_reservation(request, reservation_id):
     """
     print(' update ')
 
-    reservation = get_object_or_404(Reservation,pk=reservation_id)
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
     reservation_form = ReservationForm(initial={
         'how_many_people': reservation.how_many_people,
         'date': reservation.date,
@@ -130,12 +130,14 @@ def edit_reservation(request, reservation_id):
         'note': reservation.note
     })
     if request.method == "POST":
-        updated_reservation = get_object_or_404(Reservation,pk=reservation_id)
-        reservation_form = ReservationForm(data=request.POST, instance=reservation)
+        updated_reservation = get_object_or_404(Reservation, pk=reservation_id)
+        reservation_form = (
+            ReservationForm(data=request.POST, instance=reservation))
         if reservation_form.is_valid():
             if check_if_date_and_time_valid(
                 reservation_form['date'].value(),
-                reservation_form['time'].value()) is False:
+                reservation_form['time'].value()
+                    ) is False:
                 messages.add_message(
                     request,
                     messages.ERROR,
@@ -143,15 +145,21 @@ def edit_reservation(request, reservation_id):
                     + "you tried to reserve a table before current time")
             else:
                 updated_reservation = reservation_form.save(commit=False)
-                updated_reservation.how_many_people = reservation_form['how_many_people'].value()
+                updated_reservation.how_many_people = (
+                    reservation_form['how_many_people'].value())
                 updated_reservation.date = reservation_form['date'].value()
                 updated_reservation.time = reservation_form['time'].value()
                 updated_reservation.area = reservation_form['area'].value()
-                updated_reservation.have_kids = reservation_form['have_kids'].value()
-                updated_reservation.special_request = reservation_form['special_request'].value()
+                updated_reservation.have_kids = (
+                    reservation_form['have_kids'].value())
+                updated_reservation.special_request = (
+                    reservation_form['special_request'].value())
                 updated_reservation.note = reservation_form['note'].value()
                 updated_reservation.save()
-                messages.add_message(request, messages.SUCCESS, 'Reservation Updated!')
+                messages.add_message(
+                    request,
+                    messages.SUCCESS,
+                    'Reservation Updated!')
                 return HttpResponseRedirect(reverse('reservation_list'))
         else:
             messages.add_message(

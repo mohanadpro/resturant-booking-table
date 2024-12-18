@@ -107,8 +107,64 @@ The project was tested on multiple web browsers to check for compatibility issue
 </details>
 
 ### Python
+#### Home page app
+<details>
+<summary> views.py
+</summary>
 
+![view.py](documentation/validation/home_page_views_py_validation.png)
+</details>
 
+<details>
+<summary> urls.py
+</summary>
+
+![urls.py](documentation/validation/home_page_url_py_validation.png)
+</details>
+
+#### Meal app
+<details>
+<summary> model.py
+</summary>
+
+![model.py](documentation/validation/meal_model_py_validation.png)
+</details>
+
+<details>
+<summary> views.py
+</summary>
+
+![views.py](documentation/validation/meal_view_py_validation.png)
+</details>
+
+<details>
+<summary> urls.py
+</summary>
+
+![urls.py](documentation/validation/meal_url_py_validation.png)
+</details>
+
+#### reservation app
+<details>
+<summary> form.py
+</summary>
+
+![form.py](documentation/validation/reservation_form_py_validation.png)
+</details>
+
+<details>
+<summary> model.py
+</summary>
+
+![model.py](documentation/validation/reservation_model_py_validation.png)
+</details>
+
+<details>
+<summary> views.py
+</summary>
+
+![views.py](documentation/validation/reservation_views_py_validation.png)
+</details>
 
 ## Lighthouse Report
 
