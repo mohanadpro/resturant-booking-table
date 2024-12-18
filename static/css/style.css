@@ -39,6 +39,9 @@ footer{
     /* margin-left: 15px; */
 
 }
+.meal-name{
+    font-size: 2em;
+}
 .btn-danger{
     background-color: var(--primary-color);
 }

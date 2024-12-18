@@ -167,6 +167,18 @@ The project was tested on multiple web browsers to check for compatibility issue
 </details>
 
 ## Lighthouse Report
+<details>
+<summary> Home Page
+</summary>
+
+</details>
+
+<details>
+<summary> Login
+</summary>
+
+![Logged in](documentation/lighthous/lighthous_login_validation.png)
+</details>
 
 
 ## Bugs
