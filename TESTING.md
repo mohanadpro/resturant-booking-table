@@ -34,18 +34,18 @@ The project was tested on multiple web browsers to check for compatibility issue
 <details>
 <summary> Microsoft Edge
 </summary>
-![Chrome](documentation/validation/Microsoft_edge.png)
+![Microsoft Edge](documentation/validation/Microsoft_edge.png)
 
 
 <details>
 <summary> Opera
 </summary>
-![Chrome](documentation/validation/opera.png)
+![Opera](documentation/validation/opera.png)
 
 <details>
 <summary> Mozilla
 </summary>
-![Chrome](documentation/validation/Mozilla.png)
+![Mozilla](documentation/validation/Mozilla.png)
 
 ## Device Testing
 
