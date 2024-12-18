@@ -180,10 +180,33 @@ The project was tested on multiple web browsers to check for compatibility issue
 ![Logged in](documentation/lighthous/lighthous_login_validation.png)
 </details>
 
+<details>
+<summary> Signup
+</summary>
+
+![Signup](documentation/lighthous/lighthous_signup_validation.png)
+</details>
+
+<details>
+<summary> Reservation list page
+</summary>
+
+![Reservation List](documentation/lighthous/lighthous_reservation_list_validation.png)
+</details>
+
+<details>
+<summary> Reserve
+</summary>
+
+![Reserve](documentation/lighthous/lighthous_reserve_validation.png)
+</details>
 
 ## Bugs
 
 ### Resolved Bugs
+#### Refused to apply style from Woodland Whispers site link because its MIME type(text/html).
+
+* When I have deployed the site to Heroku for the first time, static files were not working, it was due to missing of whitenoise library, so I installed it and then deployed the project again. after that everything worked finally 
 
 ### Unresolved Bug
 
