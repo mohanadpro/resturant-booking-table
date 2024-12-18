@@ -24,7 +24,28 @@ Comprehensive testing has been performed to ensure the website's seamless and op
 
 
 ## Browser Compatibility Testing
+The project was tested on multiple web browsers to check for compatibility issues and ensure it functions as expected across all of them. This testing process guarantees a smooth and consistent user experience, regardless of the browser used.
 
+<details>
+<summary> Chrome
+</summary>
+![Chrome](documentation/validation/chrom.png)
+
+<details>
+<summary> Microsoft Edge
+</summary>
+![Chrome](documentation/validation/Microsoft_edge.png)
+
+
+<details>
+<summary> Opera
+</summary>
+![Chrome](documentation/validation/opera.png)
+
+<details>
+<summary> Mozilla
+</summary>
+![Chrome](documentation/validation/Mozilla.png)
 
 ## Device Testing
 
