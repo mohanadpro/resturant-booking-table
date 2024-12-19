@@ -4,6 +4,29 @@ Easy Online Table Reservation: Booking a table has never been easier! With our u
 We believe that every meal is a celebration. Whether you're planning a romantic dinner, a family gathering, or a business lunch, our inviting atmosphere and exquisite menu are designed to create unforgettable dining experiences.
 [Live production](https://resturant-booking-table-a5e049e05339.herokuapp.com/)
 
+### Target Audience
+* Adults 25-50 who are likely to dine out (e.g., working professionals, families, couples, etc.)
+* Target people within the restaurant’s local area or delivery radius.
+* Middle to high-income groups who can afford to dine at your restaurant.
+* People looking for convenience (easy online reservation).
+* Foodies or individuals interested in trying new or trendy restaurants.
+* Those planning special occasions (birthdays, anniversaries).
+
+### First time user
+* Can see the menu that the resturant offers
+
+### Registered User
+* Seamless login process with a secure and personalized user account.
+* Booking
+* Access to a personalized dashboard displaying booking history and upcoming reservations.
+* Ability to easily modify or cancel existing bookings for flexibility and convenience.
+
+### Admin user
+
+* Secure and separate login portal for admin users with appropriate access control.
+* Access to an admin dashboard for managing Meals.
+* Management of reservation options, such as adding, updating, or removing reservation.
+
 ## Design
 ### Used color
 * red #A80516 for background 
