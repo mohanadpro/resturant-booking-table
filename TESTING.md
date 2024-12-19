@@ -253,7 +253,16 @@ The project was tested on multiple web browsers to check for compatibility issue
 | Book a table page  |                  |                  |  
 |                    | Try to choose number for how many people field below 1 and above 25 | Not accepted| PASS  
 |                    | Click Reserve button without choosing date / time | Fill in the form fields, message is displayed | PASS  
-|                    | Click Reserve button for date or time before the current time|"Date or time is invalid, you tried to reserve a table before current time" alert message will be displayed | PASS  
+|                    | Click Reserve button for date or time before the current time| Date or time is invalid, you tried to reserve a table before current time, alert message will be displayed | PASS  
 |                    | Fill the fields with valid data | Reservation added, alert message and redirect to reservaion list page | PASS
-| Reservation list |                  |                  |  
-
+| Reservation list overview |                  |                  |
+|               | Read the reservations | Results match users bookings and details of bookings | PASS |
+|               | Click on Edit button | Redirect to Edit Booking page | PASS |
+|               | Click on Delete button | shows  confirmation message | PASS |
+| Edit Booking Page |  |    |    |
+|               | Try to book date or time before the current date | Date or time is invalid, you tried to reserve a table before current time, allert message display | PASS |
+|               | Edit with valid data | Reservation is updated and Reservation Updated! allert message displayed | PASS
+| Delete Reservation Page |  |    |    |
+|               | Press on Delete button in the reservations | It displays confirm message | PASS |
+|               | Click on Confirm Delete button | Reservation is deleted successfully..., alert message | PASS |
+|               | Click on Cancel button | Redirect back to Reservations list overview page | PASS |  
