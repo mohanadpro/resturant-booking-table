@@ -248,3 +248,5 @@ The project was tested on multiple web browsers to check for compatibility issue
 |               | Try invalid username or password | The username and/or password you specified are not correct. | PASS |
 |               | Valid password and username | Logs in, message that you signed in | PASS |
 |               | Click Sign In with empty form | Fill in the form fields | PASS |
+| Logout Page  |                  |                  |                  |
+|               | Click on Sign Out button | Sign user out, message that user signed out | PASS |
