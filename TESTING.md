@@ -232,3 +232,14 @@ The project was tested on multiple web browsers to check for compatibility issue
 |               | Click on Book a table | Redirect to reservation page | PASS |
 |               | Click on user's username after login | Redirect to Reservations Overview page | PASS |
 |               | Click on Logout | Redirect to Logout Page | PASS |
+| Regiter Page  |                  |                  |                  |
+|               | Enter invalid email | Field will only accept email address format | PASS |
+|               | Enter valid email | No error | PASS |
+|               | Email field left empty | Email is optional | PASS |
+|               | Type invalid password | Must contain atleast 8 char | PASS |
+|               | Type valid password | No error | PASS |
+|               | Type password again (different) | Password must be the same | PASS |
+|               | Click Sign Up with empty form | Fill in the form fields | PASS |
+|               | Click Sign In if you have an account | Redirect to Login page | PASS |
+|               | Fill all the form fields with an existing username | A user with that username already exists,  alert message | PASS |
+|               | Fill all the form fields | Account created, alert message that you Signed in and redirect to home page | PASS |
