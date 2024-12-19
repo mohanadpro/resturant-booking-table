@@ -161,9 +161,16 @@ Please see  [TESTING.md](TESTING.md) for all the detailed testing performed.
 * Images : from https://www.google.com
 ### Code
 * [W3C](https://validator.w3.org/) to validate written code
+* [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
+* [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python
+* [JSHint](https://jshint.com/) - Used to validate JavaScript
+* [Git](https://git-scm.com/) - Version control
 * [Stak over flow](https://stackoverflow.com/) to get information in coding
 * [Am i responsive](https://ui.dev/amiresponsive) to see project in different screens
 * [Diagrams](https://app.diagrams.net/) to create entity relation diagram
+* [Favicon Generator](https://realfavicongenerator.net/) - Used to create a favicon
+* [Heroku](https://www.heroku.com/) - Used as the cloud-based platform to deploy the site.
+
 
 ### Acknowledgments
 
