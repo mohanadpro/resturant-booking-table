@@ -243,3 +243,8 @@ The project was tested on multiple web browsers to check for compatibility issue
 |               | Click Sign In if you have an account | Redirect to Login page | PASS |
 |               | Fill all the form fields with an existing username | A user with that username already exists,  alert message | PASS |
 |               | Fill all the form fields | Account created, alert message that you Signed in and redirect to home page | PASS |
+| Login Page  |                  |                  |                  |
+|               | Click on Sign Up, if you don't have an account | Redirect to Sign Up page | PASS |
+|               | Try invalid username or password | The username and/or password you specified are not correct. | PASS |
+|               | Valid password and username | Logs in, message that you signed in | PASS |
+|               | Click Sign In with empty form | Fill in the form fields | PASS |
