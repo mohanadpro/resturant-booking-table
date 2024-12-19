@@ -68,7 +68,6 @@ def reservation(request):
     **Template:**
     :template:`reservation/reservation_list.html`
     """
-    print(' Save ')
     if request.method == "POST":
         # time = str(datetime.now()).split(' ')[1].split('.')[0]
         reservation_form = ReservationForm(data=request.POST)
@@ -117,8 +116,6 @@ def edit_reservation(request, reservation_id):
     """
     view to edit reservation
     """
-    print(' update ')
-
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     reservation_form = ReservationForm(initial={
         'how_many_people': reservation.how_many_people,
