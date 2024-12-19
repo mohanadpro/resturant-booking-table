@@ -204,7 +204,7 @@ The project was tested on multiple web browsers to check for compatibility issue
 ## Bugs
 
 ### Resolved Bugs
-#### Refused to apply style from Woodland Whispers site link because its MIME type(text/html).
+#### Refused to apply style from resturant booking table site link.
 
 * When I have deployed the site to Heroku for the first time, static files were not working, it was due to missing of whitenoise library, so I installed it and then deployed the project again. after that everything worked finally 
 
