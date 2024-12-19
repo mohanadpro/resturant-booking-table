@@ -250,3 +250,10 @@ The project was tested on multiple web browsers to check for compatibility issue
 |               | Click Sign In with empty form | Fill in the form fields | PASS |
 | Logout Page  |                  |                  |                  |
 |               | Click on Sign Out button | Sign user out, message that user signed out | PASS |
+| Book a table page  |                  |                  |  
+|                    | Try to choose number for how many people field below 1 and above 25 | Not accepted| PASS  
+|                    | Click Reserve button without choosing date / time | Fill in the form fields, message is displayed | PASS  
+|                    | Click Reserve button for date or time before the current time|"Date or time is invalid, you tried to reserve a table before current time" alert message will be displayed | PASS  
+|                    | Fill the fields with valid data | Reservation added, alert message and redirect to reservaion list page | PASS
+| Reservation list |                  |                  |  
+
