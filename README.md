@@ -26,6 +26,8 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 * Secure and separate login portal for admin users with appropriate access control.
 * Access to an admin dashboard for managing Meals.
 * Management of reservation options, such as adding, updating, or removing reservation.
+* Ability to delete user accounts, providing the necessary control for managing user data and accounts.
+
 
 ## Design
 ### Used color
