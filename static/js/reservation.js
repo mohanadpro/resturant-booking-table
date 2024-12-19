@@ -12,6 +12,8 @@ for (let button of deleteButtons) {
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     let reservationId = e.target.getAttribute("data-reservation_id");
+    console.log(submitButton);
     submitButton.href = `edit_reservation/${reservationId}`;
+    submitButton.textContent = 'Update'
   });
 }
