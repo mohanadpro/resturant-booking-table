@@ -232,7 +232,7 @@ The project was tested on multiple web browsers to check for compatibility issue
 |               | Click on Book a table | Redirect to reservation page | PASS |
 |               | Click on user's username after login | Redirect to Reservations Overview page | PASS |
 |               | Click on Logout | Redirect to Logout Page | PASS |
-| Regiter Page  |                  |                  |                  |
+| Register Page  |                  |                  |                  |
 |               | Enter invalid email | Field will only accept email address format | PASS |
 |               | Enter valid email | No error | PASS |
 |               | Email field left empty | Email is optional | PASS |
