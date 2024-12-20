@@ -21,9 +21,7 @@ def reservation_list(request):
     temp_reservations = Reservation.objects.filter(
         customer=request.user).order_by("-created_on")
     p = Paginator(temp_reservations, 6)
-    page_number = (
-        1 if request.GET.get('page')
-        is None else request.GET.get('page'))
+    page_number =1 
     try:
         page_obj = p.get_page(page_number)  # returns the desired page object
     except PageNotAnInteger:
