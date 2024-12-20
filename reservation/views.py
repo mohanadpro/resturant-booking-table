@@ -115,6 +115,12 @@ def delete_reservation(request, reservation_id):
 def edit_reservation(request, reservation_id):
     """
     view to edit reservation
+    **Context**
+    ``reservation_form``
+        a form of reservation
+        filled depending on the reservation_id from url
+    **Template:**
+    :template:`reservation/reserve.html`
     """
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     reservation_form = ReservationForm(initial={
