@@ -109,13 +109,16 @@ def delete_reservation(request, reservation_id):
     """
     view to delete Reservation
     """
-    reservation = get_object_or_404(Reservation, pk=reservation_id)
-    reservation.delete()
-    messages.add_message(
-        request,
-        messages.SUCCESS,
-        'Reservation is deleted successfully...')
-    return HttpResponseRedirect(reverse('reservation_list'))
+    if request.user.is_anonymous is True or request.user != reservation.customer:
+        return HttpResponseRedirect(reverse('home_page'))
+    else:
+        reservation = get_object_or_404(Reservation, pk=reservation_id)
+        reservation.delete()
+        messages.add_message(
+            request,
+            messages.SUCCESS,
+            'Reservation is deleted successfully...')
+        return HttpResponseRedirect(reverse('reservation_list'))
 
 
 def edit_reservation(request, reservation_id):
