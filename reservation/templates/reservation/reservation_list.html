@@ -28,7 +28,7 @@
         <td>{{reservation.time}}</td>
         <td>{% if reservation.area == 0 %}Near to fireplace{% elif reservation.area == 1%}Terrace{% elif reservation.area == 2 %}Smoker{% elif reservation.area == 3%}Inside{% elif reservation.area == 4%}Second floor{%endif%}</td>
         <td>{% if reservation.have_kids %}Yes {%else%}No {%endif%}</td>
-        <td>{{reservation.special_request}}</td>
+        <td>{% if reservation.special_request == None %}  {% else %} {{reservation.special_request}}</td> {% endif%}
         <td>{{reservation.note}}</td>
         <td>
             <a href="../reservations/edit_reservation/{{reservation.id}}" class="btn btn-primary btn-edit" data-reservation_id="{{reservation.id}}" >
