@@ -207,12 +207,19 @@ The project was tested on multiple web browsers to check for compatibility issue
 #### Refused to apply style from resturant booking table site link.
 
 * When I have deployed the site to Heroku for the first time, static files were not working, it was due to missing of whitenoise library, so I installed it and then deployed the project again. after that everything worked finally 
-
+    * it shows another problem with static files when debug mode = False 
+        adding this code to urls.py
+            re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+            re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+    * and this code to setting.py file
+            STATIC_URL = '/static/'
+            MEDIA_URL = '/media/'
+            if DEBUG:
+                STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+            else:
+                STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+            MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 * styling reserve form was the the best so the checkbox was beside the note textarea I fixed that by adding the form inside a table tag
-
-### Unresolved Bug
-
-
 
 
 ## Features Testing
