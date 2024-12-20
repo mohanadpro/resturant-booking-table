@@ -18,7 +18,6 @@ def reservation_list(request):
     **Template:**
     :template:`reservation/reservation_list.html`
     """
-    print(request.user.is_anonymous)
     if request.user.is_anonymous is True:
         return HttpResponseRedirect(reverse('home_page'))
     else:
@@ -72,35 +71,38 @@ def reservation(request):
     **Template:**
     :template:`reservation/reservation_list.html`
     """
-    if request.method == "POST":
-        # time = str(datetime.now()).split(' ')[1].split('.')[0]
-        reservation_form = ReservationForm(data=request.POST)
-        if reservation_form.is_valid() is False:
-            messages.add_message(request, messages.ERROR, 'Error happened')
-        elif check_if_date_and_time_valid(
-            reservation_form['date'].value(),
-            reservation_form['time'].value()
-        ) is False:
-            messages.add_message(
-                request,
-                messages.ERROR,
-                "Date or time is invalid,"
-                + "you tried to reserve a table before current time")
-        else:
-            reservation = reservation_form.save(commit=False)
-            reservation.customer = request.user
-            reservation_form.save()
-            messages.add_message(
-                request,
-                messages.SUCCESS,
-                'Reservation added')
-            return HttpResponseRedirect(reverse('reservation_list'))
-    reservation_form = ReservationForm()
-    return render(
-        request,
-        "reservation/reserve.html",
-        {'reservation_form': reservation_form}
-    )
+    if request.user.is_anonymous is True:
+        return HttpResponseRedirect(reverse('home_page'))
+    else:
+        if request.method == "POST":
+            # time = str(datetime.now()).split(' ')[1].split('.')[0]
+            reservation_form = ReservationForm(data=request.POST)
+            if reservation_form.is_valid() is False:
+                messages.add_message(request, messages.ERROR, 'Error happened')
+            elif check_if_date_and_time_valid(
+                reservation_form['date'].value(),
+                reservation_form['time'].value()
+            ) is False:
+                messages.add_message(
+                    request,
+                    messages.ERROR,
+                    "Date or time is invalid,"
+                    + "you tried to reserve a table before current time")
+            else:
+                reservation = reservation_form.save(commit=False)
+                reservation.customer = request.user
+                reservation_form.save()
+                messages.add_message(
+                    request,
+                    messages.SUCCESS,
+                    'Reservation added')
+                return HttpResponseRedirect(reverse('reservation_list'))
+        reservation_form = ReservationForm()
+        return render(
+            request,
+            "reservation/reserve.html",
+            {'reservation_form': reservation_form}
+        )
 
 
 def delete_reservation(request, reservation_id):
