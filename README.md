@@ -43,6 +43,35 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 
 <br/>
 
+## Wireframes
+<details>
+<summary> Home Page
+</summary>
+
+![Reserve](documentation/wireframe/index_html.png)
+</details>
+
+<details>
+<summary> Home Page after login
+</summary>
+
+![Reserve](documentation/wireframe/index_html_after_login.png)
+</details>
+
+<details>
+<summary> Reservation List
+</summary>
+
+![Reserve](documentation/wireframe/reservation_list.png)
+</details>
+
+<details>
+<summary> Reserve
+</summary>
+
+![Reserve](documentation/wireframe/Reserve.png)
+</details>
+
 ## Features
 * Navbar
 * In the navbar you user have three options 
