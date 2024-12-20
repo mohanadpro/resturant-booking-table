@@ -183,7 +183,7 @@ Please see  [TESTING.md](TESTING.md) for all the detailed testing performed.
 ## Credits 
 ---
 ### Media
-* Images : from https://www.google.com
+* Images : from https://www.google.com and https://www.freepik.com/
 ### Code
 * [W3C](https://validator.w3.org/) to validate written code
 * [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
