@@ -18,23 +18,27 @@ def reservation_list(request):
     **Template:**
     :template:`reservation/reservation_list.html`
     """
-    temp_reservations = Reservation.objects.filter(
-        customer=request.user).order_by("-created_on")
-    p = Paginator(temp_reservations, 6)
-    page_number = (
-        1 if request.GET.get('page')
-        is None else request.GET.get('page'))
-    try:
-        page_obj = p.get_page(page_number)  # returns the desired page object
-    except PageNotAnInteger:
-        # if page_number is not an integer then assign the first page
-        page_obj = p.page(1)
-    except EmptyPage:
-        # if page is empty then return last page
-        page_obj = p.page(p.num_pages)
-    context = {'page_obj': page_obj, 'reservations': p.page(page_number)}
-    # sending the page object to index.html
-    return render(request, 'reservation/reservation_list.html', context)
+    print(request.user.is_anonymous)
+    if request.user.is_anonymous is True:
+        return HttpResponseRedirect(reverse('home_page'))
+    else:
+        temp_reservations = Reservation.objects.filter(
+            customer=request.user).order_by("-created_on")
+        p = Paginator(temp_reservations, 6)
+        page_number = (
+            1 if request.GET.get('page')
+            is None else request.GET.get('page'))
+        try:
+            page_obj = p.get_page(page_number)  # returns the desired page object
+        except PageNotAnInteger:
+            # if page_number is not an integer then assign the first page
+            page_obj = p.page(1)
+        except EmptyPage:
+            # if page is empty then return last page
+            page_obj = p.page(p.num_pages)
+        context = {'page_obj': page_obj, 'reservations': p.page(page_number)}
+        # sending the page object to index.html
+        return render(request, 'reservation/reservation_list.html', context)
 
 
 def check_if_date_and_time_valid(date, selected_time):
@@ -124,9 +128,7 @@ def edit_reservation(request, reservation_id):
     """
 
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    # print(type(request.user), type(reservation.customer.))
-
-    if request.user is None or request.user != reservation.customer:
+    if request.user.is_anonymous is True or request.user != reservation.customer:
         return HttpResponseRedirect(reverse('home_page'))
     else:
         reservation_form = ReservationForm(initial={
