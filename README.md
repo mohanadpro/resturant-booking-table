@@ -36,6 +36,9 @@ We believe that every meal is a celebration. Whether you're planning a romantic 
 * white #FFFFFF for text and icons
 * black #212529 for text
 
+### Font
+* Sans Serif
+
 ## Entity Relation Diagram 
 <br/>
 
