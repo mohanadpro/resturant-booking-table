@@ -28,7 +28,7 @@ def reservation_list(request):
             1 if request.GET.get('page')
             is None else request.GET.get('page'))
         try:
-            page_obj = p.get_page(page_number)  # returns the desired page object
+            page_obj = p.get_page(page_number)
         except PageNotAnInteger:
             # if page_number is not an integer then assign the first page
             page_obj = p.page(1)
@@ -111,7 +111,8 @@ def delete_reservation(request, reservation_id):
     """
 
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    if request.user.is_anonymous is True or request.user != reservation.customer:
+    if (request.user.is_anonymous
+            is True or request.user != reservation.customer):
         return HttpResponseRedirect(reverse('home_page'))
     else:
         reservation.delete()
@@ -134,7 +135,8 @@ def edit_reservation(request, reservation_id):
     """
 
     reservation = get_object_or_404(Reservation, pk=reservation_id)
-    if request.user.is_anonymous is True or request.user != reservation.customer:
+    if (request.user.is_anonymous
+            is True or request.user != reservation.customer):
         return HttpResponseRedirect(reverse('home_page'))
     else:
         reservation_form = ReservationForm(initial={
@@ -147,7 +149,8 @@ def edit_reservation(request, reservation_id):
             'note': reservation.note
         })
         if request.method == "POST":
-            updated_reservation = get_object_or_404(Reservation, pk=reservation_id)
+            updated_reservation = (
+                 get_object_or_404(Reservation, pk=reservation_id))
             reservation_form = (
                 ReservationForm(data=request.POST, instance=reservation))
             if reservation_form.is_valid():
