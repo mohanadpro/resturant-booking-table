@@ -107,6 +107,14 @@ The project was tested on multiple web browsers to check for compatibility issue
 </details>
 
 ### Python
+#### Settings
+<details>
+<summary> setting.py
+</summary>
+
+![setting.py](documentation/validation/setting_py.png)
+</details>
+
 #### Home page app
 <details>
 <summary> views.py
@@ -163,7 +171,7 @@ The project was tested on multiple web browsers to check for compatibility issue
 <summary> views.py
 </summary>
 
-![views.py](documentation/validation/reservation_views_py_validation.png)
+![views.py](documentation/validation/reservation_py.png)
 </details>
 
 ## Lighthouse Report
