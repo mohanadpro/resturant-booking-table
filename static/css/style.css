@@ -6,6 +6,10 @@
     padding: 0;
     margin: 0;
 }
+table{
+    display: block;
+    overflow-x: scroll;
+}
 footer{
     background-color: var(--primary-color);
 }
