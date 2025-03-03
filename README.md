@@ -228,6 +228,8 @@ Please see  [TESTING.md](TESTING.md) for all the detailed testing performed.
 * [Favicon Generator](https://realfavicongenerator.net/) - Used to create a favicon
 * [Heroku](https://www.heroku.com/) - Used as the cloud-based platform to deploy the site.
 
+### Note
+The previous values for these 2 variables SECRET_KEY, CLOUDINARY_URL and DATABASE_URL are replace and no longer in use
 
 ### Acknowledgments
 
